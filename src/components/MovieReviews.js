@@ -8,24 +8,23 @@ const Review = ({
   summary_short
 }) => {
   return (
-
     <div
-      key={headline}
-      className="review"
-    >
-      <header>
-        <a
-          className="review-link"
-          href={link.url}
-        >
+    key={headline}
+    className="review"
+  >
+    <header>
+      <a
+        className="review-link"
+        href={link.url}
+      >
         {headline}
-        </a>
-        <br/>
-        <span className="author">{byline}</span>
-      </header>
-      <blockquote>{summary_short}</blockquote>
-    </div>
-  );
+      </a>
+      <br/>
+      <span className="author">{byline}</span>
+    </header>
+    <blockquote>{summary_short}</blockquote>
+  </div>
+);
 };
 
 const MovieReviews = ({ reviews }) => <div className="review-list">{reviews.map(Review)}</div>;

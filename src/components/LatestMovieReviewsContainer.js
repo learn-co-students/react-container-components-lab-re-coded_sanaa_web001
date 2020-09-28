@@ -15,11 +15,11 @@ class LatestMovieReviewsContainer extends Component {
         reviews: []
       };
     }
-  
+
     componentDidMount() {
-      fetch(URL)
-        .then(res => res.json())
-        .then(response => this.setState({ reviews: response.results }));
+        fetch(URL)
+          .then(res => res.json())
+          .then(response => this.setState({ reviews: response.results }));
     }
 
     render() {
